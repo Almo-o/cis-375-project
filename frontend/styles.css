@@ -553,6 +553,26 @@ nav a {
     }
 }
 
+/* Individual Field Errors */
+.field-error {
+    color: #e74c3c; 
+    font-size: 0.85rem;
+    margin-top: 5px;
+    min-height: 1.2em; 
+}
+
+/* Global Error Banner */
+.error-banner {
+    background-color: #fde8e8;
+    color: #c53030;
+    border: 1px solid #f8b4b4;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 /* CART PAGE */
 
 .cart-page h1 {

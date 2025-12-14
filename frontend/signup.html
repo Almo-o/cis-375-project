@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Sign up - BuyThings</title>
     <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
 
@@ -17,90 +18,65 @@
                 Create your account using your email, password, and confirmation code.
             </p>
 
-            <form class="auth-form">
-                <!-- Email -->
+            <div id="global-error" class="error-banner" style="display: none;"></div>
+
+            <form class="auth-form" id="signup-form">
                 <label class="field">
                     <span class="field-label">Email address</span>
                     <div class="field-input-wrapper">
                         <span class="field-icon">✉️</span>
-                        <input
-                            type="email"
-                            name="email"
-                            class="field-input"
-                            placeholder="you@example.com"
-                            required
-                        />
+                        <input type="email" name="email" id="signup-email" class="field-input" placeholder="you@example.com" required />
                     </div>
+                    <div class="field-error" id="error-email"></div>
                 </label>
 
-                <!-- Password -->
                 <label class="field">
                     <span class="field-label">Password</span>
                     <div class="field-input-wrapper">
                         <span class="field-icon">🔒</span>
-                        <input
-                            type="password"
-                            name="password"
-                            class="field-input"
-                            placeholder="••••••••"
-                            required
-                        />
+                        <input type="password" name="password" id="signup-password" class="field-input" placeholder="••••••••" required />
                         <button type="button" class="field-icon-btn" aria-label="Show password">
                             <img src="img/eye.png" alt="Show password" class="eye-icon">
                         </button>
                     </div>
+                    <div class="field-error" id="error-password"></div>
                 </label>
 
-                <!-- Confirm password -->
                 <label class="field">
                     <span class="field-label">Confirm password</span>
                     <div class="field-input-wrapper">
                         <span class="field-icon">🔒</span>
-                        <input
-                            type="password"
-                            name="confirm_password"
-                            class="field-input"
-                            placeholder="••••••••"
-                            required
-                        />
-                        <button type="button" class="field-icon-btn" aria-label="Show password">
-                            <img src="img/eye.png" alt="Show password" class="eye-icon">
-                        </button>
+                        <input type="password" name="confirm_password" id="signup-confirm-password" class="field-input" placeholder="••••••••" required />
                     </div>
+                    <div class="field-error" id="error-confirm-password"></div>
                 </label>
 
-                <!-- Authentication Code -->
                 <label class="field">
                     <span class="field-label">Code</span>
                     <div class="code-row">
                         <div class="field-input-wrapper">
                             <span class="field-icon">#</span>
-                            <input
-                                type="text"
-                                name="code"
-                                class="field-input"
-                                placeholder="Enter confirmation code"
-                                required
-                            />
+                            <input type="text" name="code" id="signup-code" class="field-input" placeholder="Enter confirmation code" required />
                         </div>
-                        <button type="button" class="code-btn">
+                        <button type="button" class="code-btn" id="send-code-btn">
                             Send code
                         </button>
                     </div>
+                    <div class="field-error" id="error-code"></div>
                 </label>
 
-                <!-- Submit -->
                 <button type="submit" class="btn-primary auth-submit">
                     Sign up
                 </button>
             </form>
 
             <p class="auth-footer-text">
-                Already have an account?
-                <a href="login.html" class="auth-link">Log in</a>
+                Already have an account? <a href="login.html" class="auth-link">Log in</a>
             </p>
         </section>
     </main>
+    <script src="mock-api.js"></script>
 
+    <script src="auth.js"></script>
 </body>
 </html>
